@@ -1,0 +1,24 @@
+@mixin positionTopBot {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+}
+@mixin calcWidth($w, $wcont) {
+      width: $w / $wcont * 100 + 0%;
+}
+
+@mixin media($breakpoint){
+      @if ($breakpoint == medium){
+            @media (max-width: 938px) { 
+                  .header{
+                        max-width: 100px;
+                  }
+            }
+      }
+      @if ($breakpoint == small){
+            @media (max-width: 800px){ @content; }
+      }
+      @if ($breakpoint == verySmall){
+            @media (max-width: 540px) {@content}
+      }
+}

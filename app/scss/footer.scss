@@ -1,0 +1,56 @@
+@import 'global';
+
+.footer {
+      margin-top: 180px;
+      background-image: url('../images/footer/Group.png');
+            &__name {
+                  display: flex;
+                  justify-content: space-between;
+                  height: 50px;
+                  align-items: center;
+                        h4{
+                              color: $color_second;
+                              font-size: $fn-m;
+                        }
+            }
+            &__name-social {
+                  width: 170px;
+                  display: flex;
+                  justify-content: space-between;
+                        a{
+                              display: inline-block;
+                              width: 40px;
+                        }
+
+            }
+            &__list {
+                  display: flex;
+                 
+                  justify-content: space-between;
+                  margin-top: 100px;
+                  
+                        ul{
+                              list-style-type: none;
+                              padding: 0;
+
+                                    li{
+                                          margin-bottom: 25px;
+                                          font-weight:normal;
+                                                a{
+                                                      color: rgb(214, 214, 214);
+                                                     
+                                                }
+                                                      &:first-child{
+                                                            font-weight: bold;
+                                                            color: white;
+                                                      }
+                                    }
+                        }
+                  @include media(small){
+                        margin-top: 50px;
+                  }
+            }
+      @include media(small){
+            margin-top: 100px;
+            }
+}

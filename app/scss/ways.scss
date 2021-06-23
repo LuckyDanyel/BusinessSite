@@ -1,0 +1,104 @@
+@import 'global';
+
+.ways {
+      text-align: center;
+      margin-top: 200px;
+            &__title {
+
+            }
+            &__title-heading {
+                  font-size: $fn-XL;
+                        
+                        br{
+                              @include media(medium){
+                                    display: none;
+                              }
+                        }
+                  @include media(small){
+                        font-size: $fn-XL - 9;
+                        line-height: 2px;
+                  }
+            }
+      
+            &__title-text {
+                  font-size: $fn-xs + 1;
+
+            }
+      
+            &__resons {
+                  margin-top: 50px;
+                  display: flex;
+                  justify-content: space-between;
+
+                  @include media(medium){
+                        margin-top: 30px;
+                  }
+            }
+            &__resons-list {
+                  padding-left: 0;
+                  &:nth-child(1){
+                        max-width: 190px;
+
+                        @include media(medium){
+                              max-width: 190px - 190/10;
+                        }
+                        
+                        @include media(small){
+                              max-width: 120px;
+                        }
+                  }
+                  &:nth-child(2){
+                        max-width: 290px;
+
+                        @include media(medium){
+                              max-width: 290px - 290/10;
+                        }
+                        @include media(small){
+                              max-width:220px;
+                             
+                        }
+                  }
+                  &:nth-child(3){
+                        max-width: 220px;
+
+                        @include media(medium){
+                              max-width: 220px - 220/10;
+                        }
+                        @include media(medium){
+                              max-width: 150px;
+                        }
+                  }
+            }
+            
+            &__resons-list-item {
+
+                        h4{
+                              color: $color_main;
+                              font-size: $fn-XL;
+                              margin: 0;
+
+                              @include media(small){
+                                    font-size: $fn-XL - 4;
+                              }
+                        }
+                        p{
+                              color: $color_white;
+                              margin: 0;
+                              margin-top: 30px;
+
+                              @include media(medium){
+                                    margin-top: 15px;
+                              }
+                              @include media(small){
+                                    font-size: $fn-xxs - 1;
+                              }
+                        }
+            }
+      @include media(medium){
+            margin-top: 150px;
+      }
+      @include media(small){
+            margin-top: 120px;
+      }
+      
+}

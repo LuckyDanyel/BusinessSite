@@ -1,0 +1,76 @@
+@import 'global';
+
+.resons {
+      margin-top: 140px;
+      background-image: url('../images/resons/bg.png');
+      background-position: top;
+      padding-top: 60px;
+            &__wrapper-center {
+
+                  padding-top: 70px;
+                  text-align: center;
+                  height: 340px;
+                  border-radius: 15px;
+                  background-color: #181B51;
+                        h2 {
+                              color: $color_second;
+                              font-size: $fn-XL;
+                              margin-bottom: 30px;
+                        }
+                        &_text {
+                              color: $color_white;
+                              display: inline-block;
+                              margin-top: 0;
+                              max-width: 400px;
+                              font-size: $fn-xs;
+                        }
+            }
+            &__form {
+                  max-width: 440px;
+                  height: 60px;
+                  margin: 0 auto;
+                  margin-bottom: 30px;
+                        input[type=email]{
+                              width: 70%;
+                              height: 100%;
+                              box-sizing: border-box;
+                              border-radius: 8px 0 0 8px;
+                              border: none;
+                              padding-left: 20px;
+                              background-color: #303162;
+                              color: #7273a3;
+                              font-size: $fn-xxs;
+                              
+                             
+                              
+                        }
+                        button{
+                              width: 30%;
+                              height: 100%;
+                              box-sizing: border-box;
+                              border-radius: 0 8px 8px 0;
+                              border: 1px solid $color_second;
+                              color: white;
+                              background-color: $color_second;
+                              font-size: $fn-xxs - 2;
+                              padding: 0;
+                              margin: 0;
+
+                             
+                              
+                        }
+            }
+            &__text {
+                  font-size: $fn-xxs;
+                  color: #8476AA;
+                  
+            }
+            @include media(small){
+                  margin-top: 50px;
+            }
+            @include media(verySmall){
+                  padding: 0;
+                  margin-top: 200px;
+            }
+            
+      }

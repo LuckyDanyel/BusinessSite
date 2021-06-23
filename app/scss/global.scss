@@ -1,0 +1,114 @@
+@import 'fonts';
+@import 'mixin';
+@import 'null';
+@import 'var';
+span{
+      color: $color_second;
+}
+body{
+      background-color:  $colors_bg;
+}
+.wrapper{
+      height: auto;
+      padding-top: 60px;
+      position: relative;
+}
+.container-image{
+margin: 0 auto;
+    max-width: 1500px;
+    position: relative;
+    width: 100%;
+    background-image: url('../images/bg-1.png');
+    background-repeat: no-repeat;
+    background-position: top 25% right -10% ;
+    
+            &:before{
+                  display: block;
+                  content: '';
+                  max-width: 1500px;
+                  width: 100%;
+                  height: 1500px;
+                  position: absolute;
+                  background-image: url('../images/choise/bg-1.png'), url('../images/choise/bg-2.png');
+                  background-repeat: no-repeat;
+                  background-position: top 70% right 0%,top 80% left 0 ;
+                  z-index: -1;
+                  opacity: 0.1;
+            }
+      @include media(small){
+            background-image: none;
+      }
+
+      
+
+
+}
+.container {
+      margin: 0 auto;
+      max-width: $width-cont-m;
+
+      @include media(medium){
+            max-width: 700px;
+            
+      }
+      @include media(small){
+            max-width: 550px;
+      }
+      @include media(verySmall){
+          width: 100%;
+      }
+}
+.logo {
+      width: 36px;
+      height: auto;
+}
+.buttons {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+}
+.buttons-items {
+      color: $color_second;
+      border: 1px solid $color_second;
+      border-radius: 5px;
+      display: inline-block;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transition: $time;
+            &:hover{
+                  background-color: $color_second;
+                  color: white;
+            }
+      
+}
+
+.heading {
+      color: $color_main;
+      font-style: normal;
+      font-weight: bold;
+      line-height: 50px;
+
+      @include media(verySmall){
+            line-height: 30px;
+      }
+}
+.text {
+    
+      color: $color_white;
+}
+
+.list {
+      list-style-type: none;
+}
+
+.postive-heading{
+      font-size: $fn-s;
+      color: $color_main;
+      line-height: 22px;
+}
+.positive-text{
+      font-size: $fn-xxs;
+      color: $color_white;
+      line-height: 22px;
+}

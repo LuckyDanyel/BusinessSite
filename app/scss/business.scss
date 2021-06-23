@@ -1,0 +1,302 @@
+@import 'global';
+
+
+.business {
+
+      margin-top: 153px;
+      min-width: 800px;
+            &__container-image{
+                  max-width: 1500px;
+                  margin: 0 auto;
+                  position: relative;
+                  
+
+                        img{
+
+                                  &:last-child{
+                                          width: 800px;
+                                          position: absolute;
+                                          top: 0;
+                                          right: 0;
+                                                @include media(medium){
+                                                      max-width: 600px;
+                                                }
+                                                @include media(small){
+                                                      max-width: 400px;
+                                                }
+                                    }
+                        }
+            }
+
+            &__container{
+                  display: flex;
+                  justify-content: space-between;
+
+                  @include media(verySmall){
+                       align-items: center;
+                        flex-flow: column nowrap;
+                  }
+            }
+            &__title {
+                  max-width: 455px;
+                  width: 100%;
+                  text-align: left;
+
+                  @include media(verySmall){
+                        width: 100%;
+                        display: flex;
+                        flex-flow: column nowrap;
+                        align-items: center;
+                        text-align: center;
+                        margin-top: 30px;
+                   }
+                  
+            }
+            &__title-heading {
+                  font-size: $fn-XXL;
+                        span{
+                              color: $color_second;
+                        }
+                  @include media(medium){
+                        font-size: $fn-XXL - 10px;
+                        width: 320px;
+                        margin-bottom: 20px;
+                  }
+                  @include media(small){
+                        line-height: 37px;
+                      
+                  }
+                  @include media(verySmall){
+                        font-size: $fn-XXL - 15px;
+                        width: 100%;
+                    }
+            }
+            &__title-text {
+                  font-size: $fn-xxs + 1;
+                  margin-bottom: 50px;
+                  margin-top: 50px;
+                  line-height: 20px;
+                  @include media(medium){
+                        display: inline-block;
+                        width: 320px;
+                        margin-top:0;
+                        margin-bottom: 30px;
+                        font-size: $fn-xxs  - 1px;
+                        
+                  }
+                  @include media(small){
+                        width: 250px;
+                        margin-bottom: 20px;
+                    
+                        
+                  }
+                  @include media(verySmall){
+                        font-size: $fn-xxs  - 3px;
+                        width: 100%;
+                    }
+            }
+            &__title-text-2{
+                  line-height: 28px;
+                  font-size: $fn-xxs + 1;
+                  margin-bottom: 50px;
+                  margin-top: 50px;
+                  @include media(medium){
+                        display: inline-block;
+                        width: 280px;
+                        line-height: 20px;
+                        margin-top:0;
+                        margin-bottom: 30px;
+                        font-size: $fn-xxs  - 1px;
+                        
+                  }
+                  @include media(small){
+                        margin-bottom: 20px;
+                  }
+            }
+            &__title-button-item {
+                  width: 156px;
+                  height: 56px;
+
+                  @include media(medium){
+                        
+                        height: 56px - 56/4;
+                        font-size: $fn-xxs;
+                  }
+                  @include media(small){
+                        height: 56px - 56/3;
+                        width: 156px - 156/3;
+                        font-size: $fn-xxs - 2;
+                  }
+                  @include media(verySmall){
+                        width: 140px;
+                        height: 40px;
+                        font-size: $fn-xxs;
+                        
+                  }
+                  
+            }
+            &__graph {
+                  width: 335px;
+                  height: auto;
+                  position: relative;
+
+                        div{
+
+                              &:nth-child(1){
+                                    width: 290px;
+                                    @include media(medium){
+                                          width: 290px - 290/4;
+                                    }
+                                    @include media(small){
+                                          width: 290px - 290/3;
+                                    }
+                                    @include media(verySmall){
+                                         
+                                    }
+                              }
+                              &:nth-child(2){
+                                    width: 230px;
+                                    position: absolute;
+                                    top: 20px;
+                                    left: -170px;
+                                    @include media(medium){
+                                          width: 230px - 230/4;
+                                          left: -80px;
+                                    }
+                                    @include media(small){
+                                          width: 230px - 230/3;
+                                          left: -10px;
+                                    }
+                                    @include media(verySmall){
+                                        
+                                    }
+                              }
+                              &:nth-child(3){
+                                    width: 150px;
+                                    position: absolute;
+                                    bottom: -90px;
+                                    left: 0px;
+                                    @include media(medium){
+                                          width: 150px - 150/4;
+                                          bottom: -65px;
+                                    }
+                                    @include media(small){
+                                          width: 150px - 150/3;
+                                          bottom: -40px;
+                                    }
+                                    @include media(verySmall){
+                                         bottom: -60px;
+                                         left: 70px;
+                                    }
+                              }
+                              &:nth-child(4){
+                                    width: 150px;
+                                    position: absolute;
+                                    bottom: -50px;
+                                    right: 0px;
+                                    z-index: -1;
+                                    @include media(medium){
+                                          width: 150px - 150/4;
+                                          bottom: -40px;
+                                    }
+                                    @include media(small){
+                                          width: 150px - 150/3;
+                                          bottom: -20px;
+                                    }
+                                    @include media(verySmall){
+                                          right: -20px;
+                                          display: none;
+                                          
+                                    }
+                              }
+                        
+                        }
+                  @include media(verySmall){
+                              height: auto;
+                              max-width:100%;
+                              order: -1;
+                              display: flex;
+                              justify-content: center;
+                        }
+            }
+            &__graph-2 {
+                  max-width: 480px;
+                  height: auto;
+                  position: relative;
+                  z-index: 5;
+                  width: 100%;
+
+                        @include media(medium){
+                              max-width: 305px;
+                        }
+                        img{
+
+                              &:nth-child(1){
+                                    width: 350px;
+
+                                    @include media(medium){
+                                          width: 350px - 350/3;
+                                    }
+                                    @include media(small){
+                                          width: 350px - 350/2;
+                                    }
+                                    @include media(verySmall){
+                                          width: 200px;
+                                    }
+                              }
+                              &:nth-child(2){
+                                    position: absolute;
+                                    bottom: 100px;
+                                    right: 20px;
+                                    width: 130px;
+                                    z-index: -1;
+                                    @include media(medium){
+                                          width: 130px - 130/3;
+                                          right: 2px;
+                                    }
+                                    @include media(small){
+                                          width: 130px - 130/2;
+                                          right: 2px;
+                                    }
+                                    @include media(verySmall){
+                                          right: -20px;
+                                          width: 85px;
+                                    }
+                              }
+                              &:nth-child(3){
+                                    width: 150px;
+                                    position: absolute;
+                                    top: 90px;
+                                    left: -100px;
+                                    @include media(medium){
+                                          width: 150px - 150/3;
+                                          left: -70px;
+                                    }
+                                    @include media(small){
+                                          width: 150px - 150/2;
+                                          left: -50px;
+                                    }
+                                    @include media(verySmall){
+                                         left: 0;
+                                         width: 90px;
+                                    }
+                              }
+                        
+                        }
+                  @include media(verySmall){
+                              margin-top: 20px;
+                              width: 100%;
+                              display: flex;
+                              justify-content: center;
+                              order: -1;
+                        }
+                        
+            }
+      @include media(medium){
+            margin-top: 100px;
+      }
+      @include media(small){
+            min-width: 0;
+            margin-top: 20px;
+      }
+}
